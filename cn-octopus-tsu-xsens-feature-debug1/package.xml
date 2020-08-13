@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>device_xsens</name>
+  <version>1.0.0</version>
+  <description>zoro version of device_gnss</description>
+  <maintainer email="plainji@gmail.com">Plain Ji</maintainer>
+  <license>BSD</license>
+
+  <depend>ament_cmake</depend>
+  <depend>rclcpp</depend>
+  <depend>middleware</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>diagnostic_updater</depend>
+  <depend>diagnostic_msgs</depend>
+  <depend>heartbeat_sender</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>xsens_msgs</depend>
+  <depend>transformation-util2</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,23 @@
+name: device_xsens
+version: __from_changelog__
+
+deps:
+  zoro: any
+  middleware: 2.*
+  xsens_msgs: any
+  eigen: any
+  transformation-util2: any
+
+#extra_deps:
+#  apt: curl
+#  apt: libcurl4-openssl-dev
+
+build: |
+  mkdir -p build
+  pushd build
+    cmake -DUSE_ZORO=ON -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} ..
+    make -j$(nproc)
+    make install
+  popd
+  install_octopus_app  
+  index_zoro_pkg
